@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-d
+spec:
+  selector:
+    matchLabels:
+      app: app-d
+  template:
+    metadata:
+      labels:
+        app: app-d
+    spec:
+      containers:
+      - name: app-d
+        image: avinash200016/todo-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3100
