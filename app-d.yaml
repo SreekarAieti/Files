@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app-d
-        image: avinash200016/todo-app
+        image: ubuntu:latest
         resources:
           limits:
             memory: "128Mi"
